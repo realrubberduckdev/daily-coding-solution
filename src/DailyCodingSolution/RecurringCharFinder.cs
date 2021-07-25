@@ -10,6 +10,14 @@
     {
         public static string GetRecurringChar(string stringValue)
         {
+            for (int i = 0; i < stringValue.Length - 1; i++)
+            {
+                if (stringValue[i] == stringValue[i + 1])
+                {
+                    return stringValue[i].ToString();
+                }
+            }
+
             return null;
         }
     }
