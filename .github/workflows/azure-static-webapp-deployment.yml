@@ -24,7 +24,7 @@ jobs:
       - uses: nikeee/docfx-action@v1.0.0
         name: Build Documentation
         with:
-          args: docfx.json
+          args: docs/docfx.json
 
       - name: Build And Deploy
         id: builddeploy
@@ -32,6 +32,4 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }}
           action: 'upload'
-          ###### Repository/Build Configurations
-          app_location: '/_site'
-          ###### End of Repository/Build Configurations ######
+          app_location: '/docs/_site'
