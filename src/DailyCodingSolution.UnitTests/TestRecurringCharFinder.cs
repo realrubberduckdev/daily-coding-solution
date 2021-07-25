@@ -6,6 +6,8 @@ namespace DailyCodingSolution.UnitTests
     {
         [TestCase("abcde", ExpectedResult = null)]
         [TestCase("abbcde", ExpectedResult = "b")]
+        [TestCase("abcdee", ExpectedResult = "e")]
+        [TestCase("abbcdee", ExpectedResult = "b")]
         public string TestGetRecurringChar(string input) => RecurringCharFinder.GetRecurringChar(input);
     }
 }
