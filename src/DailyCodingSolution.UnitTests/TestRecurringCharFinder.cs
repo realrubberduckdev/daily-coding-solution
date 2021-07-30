@@ -1,13 +1,15 @@
-using NUnit.Framework;
+using System;
+using Xunit;
 
 namespace DailyCodingSolution.UnitTests
 {
-    public class TestRecurringCharFinder
-    {
-        [TestCase("abcde", ExpectedResult = null)]
-        [TestCase("abbcde", ExpectedResult = "b")]
-        [TestCase("abcdee", ExpectedResult = "e")]
-        [TestCase("abbcdee", ExpectedResult = "b")]
-        public string TestGetRecurringChar(string input) => RecurringCharFinder.GetRecurringChar(input);
-    }
+  public class TestRecurringCharFinder
+  {
+    [Theory]
+    [InlineData("abcde", null)]
+    [InlineData("abbcde", "b")]
+    [InlineData("abcdee", "e")]
+    [InlineData("abbcdee", "b")]
+    public void TestGetRecurringChar(string input, string expectedResult) => Assert.Equal(RecurringCharFinder.GetRecurringChar(input), expectedResult);
+  }
 }
