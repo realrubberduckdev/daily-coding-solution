@@ -13,9 +13,9 @@ namespace DailyCodingSolution
   /// For example, given[10, 15, 3, 7] and k of 17, return true since 10 + 7 is 17.
   /// Bonus: Can you do this in one pass?
   /// </summary>
-  public static class SumFinder
+  public class SumFinder
   {
-    public static bool IsSumPresent(int[] numbers, int sumToFind)
+    public bool IsSumPresent(int[] numbers, int sumToFind)
     {
       for (var i = 0; i < numbers.Length -1; i++)
       {
@@ -26,6 +26,11 @@ namespace DailyCodingSolution
         }
       }
 
+      return false;
+    }
+
+    public bool IsSumPresentOnePass(int[] numbers, int sumToFind)
+    {
       return false;
     }
   }
