@@ -15,6 +15,12 @@ namespace DailyCodingSolution
   /// </summary>
   public class SumFinder
   {
+    /// <summary>
+    /// Check if sum present without one pass.
+    /// </summary>
+    /// <param name="numbers">Array of numbers to search within.</param>
+    /// <param name="sumToFind">Sum value to locate.</param>
+    /// <returns>True if value can be calculated using two numbers in array.</returns>
     public bool IsSumPresent(int[] numbers, int sumToFind)
     {
       for (var i = 0; i < numbers.Length -1; i++)
@@ -29,9 +35,29 @@ namespace DailyCodingSolution
       return false;
     }
 
+    /// <summary>
+    /// Check if sum present with one pass. Bonus.
+    /// </summary>
+    /// <param name="numbers">Array of numbers to search within.</param>
+    /// <param name="sumToFind">Sum value to locate.</param>
+    /// <returns>True if value can be calculated using two numbers in array.</returns>
     public bool IsSumPresentOnePass(int[] numbers, int sumToFind)
     {
-      return false;
+      var differences = new List<int>();
+      var sumFound = false;
+      foreach (var number in numbers)
+      {
+        var diff = sumToFind - number;
+        if (differences.Contains(diff))
+        {
+          sumFound = true;
+          break;
+        }
+
+        differences.Add(number);
+      }
+
+      return sumFound;
     }
   }
 }
