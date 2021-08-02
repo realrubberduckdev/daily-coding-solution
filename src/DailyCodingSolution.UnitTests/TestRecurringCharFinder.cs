@@ -1,4 +1,3 @@
-using System;
 using Xunit;
 
 namespace DailyCodingSolution.UnitTests
@@ -10,6 +9,7 @@ namespace DailyCodingSolution.UnitTests
     [InlineData("abbcde", "b")]
     [InlineData("abcdee", "e")]
     [InlineData("abbcdee", "b")]
-    public void TestGetRecurringChar(string input, string expectedResult) => Assert.Equal(RecurringCharFinder.GetRecurringChar(input), expectedResult);
+    public void TestGetRecurringChar(string input, string expectedResult) =>
+      Assert.Equal(RecurringCharFinder.GetRecurringChar(input), expectedResult);
   }
 }
