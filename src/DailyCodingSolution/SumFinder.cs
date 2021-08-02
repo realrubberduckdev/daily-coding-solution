@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace DailyCodingSolution
 {
@@ -23,7 +19,7 @@ namespace DailyCodingSolution
     /// <returns>True if value can be calculated using two numbers in array.</returns>
     public bool IsSumPresent(int[] numbers, int sumToFind)
     {
-      for (var i = 0; i < numbers.Length -1; i++)
+      for (var i = 0; i < numbers.Length - 1; i++)
       {
         for (var j = i + 1; j < numbers.Length; j++)
         {
