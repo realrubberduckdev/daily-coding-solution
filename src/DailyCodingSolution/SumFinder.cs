@@ -17,6 +17,15 @@ namespace DailyCodingSolution
   {
     public static bool IsSumPresent(int[] numbers, int sumToFind)
     {
+      for (var i = 0; i < numbers.Length -1; i++)
+      {
+        for (var j = i + 1; j < numbers.Length; j++)
+        {
+          if ((numbers[i] + numbers[j]) == sumToFind)
+            return true;
+        }
+      }
+
       return false;
     }
   }
