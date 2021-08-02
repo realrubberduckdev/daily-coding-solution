@@ -10,7 +10,7 @@
     {
         public static string GetRecurringChar(string stringValue)
         {
-            for (int i = 0; i < stringValue.Length - 1; i++)
+            for (var i = 0; i < stringValue.Length - 1; i++)
             {
                 if (stringValue[i] == stringValue[i + 1])
                 {
