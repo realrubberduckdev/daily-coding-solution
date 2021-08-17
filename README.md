@@ -1,5 +1,18 @@
 # daily-coding-solution
-This repository contains solutions to daily coding problems provided by [Daily Coding Problem](https://www.dailycodingproblem.com/) website.
+This repository is hosted as [https://www.dailycodingsolution.com/](https://www.dailycodingsolution.com/).
+It contains solutions to daily coding problems provided by [Daily Coding Problem](https://www.dailycodingproblem.com/) website.
+
+# Development
+# Website generation
+- Install [DocFX commandline tool](https://dotnet.github.io/docfx/tutorial/docfx_getting_started.html#2-use-docfx-as-a-command-line-tool). I use Chocolatey.
+- Run command
+```
+docfx .\docs\docfx.json --serve
+```
+
+# Adding/modifying coding solution
+- Open `src/DailyCodingSolution.sln` in IDE of your choice. I use [VS IDE](https://visualstudio.microsoft.com/).
+- Build and run unit tests.
 
 # How to contribute
 ## Contribute a solution
