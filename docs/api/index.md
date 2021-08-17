@@ -1,2 +1,2 @@
-# PLACEHOLDER
-TODO: Add .NET projects to the *src* folder and run `docfx` to generate **REAL** *API Documentation*!
+# Coding problem solutions
+Coding solutions documentation is generated from doc comments in code. Click on the side bar to find solutions.
