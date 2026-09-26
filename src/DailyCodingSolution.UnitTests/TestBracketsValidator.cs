@@ -18,7 +18,10 @@ namespace DailyCodingSolution.UnitTests
             new object[] { "{}", true },
             new object[] { "([{}])", true },
             new object[] { "([)]", false },
-            new object[] { "{(}[)]", false }
+            new object[] { "{(}[)]", false },
+            new object[] { "]", false },
+            new object[] { "(", false },
+            new object[] { "}", false }
       };
   }
 }
