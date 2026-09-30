@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DailyCodingSolution
 {
@@ -9,6 +10,8 @@ namespace DailyCodingSolution
   {
     public static int[] GetLongestSubarrayForPositiveNumbers(int[] numbers, int maxSum)
     {
+      ArgumentOutOfRangeException.ThrowIfZero(numbers.Length, nameof(numbers));
+
       int leftPointer = 0;
       int rightPointer = 0;
       int currentSum = 0;
@@ -17,7 +20,14 @@ namespace DailyCodingSolution
 
       while (rightPointer < numbers.Length)
       {
-        currentSum += numbers[rightPointer];
+        int number = numbers[rightPointer];
+        if (number <= 0)
+        {
+            throw new ArgumentException(
+                $"Element at index {rightPointer} must be positive.",
+                nameof(numbers));
+        }
+        currentSum += number;
 
         while (currentSum > maxSum && leftPointer <= rightPointer)
         {
