@@ -60,5 +60,16 @@ namespace DailyCodingSolution
 
       return result;
     }
+
+    /// <summary>
+    /// Get the longest contiguous subarray whose sum is less than or equal to the specified maximum sum.
+    /// </summary>
+    /// <param name="numbers">The array of numbers to search within, can have negative numbers.</param>
+    /// <param name="maxSum">The maximum allowed sum for the subarray.</param>
+    /// <returns>The longest contiguous subarray whose sum is less than or equal to <paramref name="maxSum"/>.</returns>
+    public static int[] GetLongestSubarray(int[] numbers, int maxSum)
+    {
+      return [];
+    }
   }
 }
