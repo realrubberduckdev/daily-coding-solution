@@ -67,7 +67,7 @@ namespace DailyCodingSolution.UnitTests
 
     public static IEnumerable<ITheoryDataRow> GetLongestSubarrayTestData =>
     [
-      new TheoryDataRow<int[], int, int[]>([10, -15, 3, 7], 17, [3, 7])
+      new TheoryDataRow<int[], int, int[]>([10, -15, 3, 7], 17, [10, -15, 3, 7])
           .WithTestDisplayName("Returns longest subarray totaling <=17"),
 
       new TheoryDataRow<int[], int, int[]>([2, 4, 6, 8, -10, 12, 16], 14, [2, 4, 6])

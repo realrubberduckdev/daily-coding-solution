@@ -69,7 +69,36 @@ namespace DailyCodingSolution
     /// <returns>The longest contiguous subarray whose sum is less than or equal to <paramref name="maxSum"/>.</returns>
     public static int[] GetLongestSubarray(int[] numbers, int maxSum)
     {
-      return [];
+      int prefixSum = 0;
+      int maxLength = 0;
+      int startIndex = 0;
+      int leftPointer = 0;
+
+      for (int rightPointer = 0; rightPointer < numbers.Length; rightPointer++)
+      {
+        prefixSum += numbers[rightPointer];
+
+        while (prefixSum > maxSum && leftPointer <= rightPointer)
+        {
+          prefixSum -= numbers[leftPointer];
+          leftPointer++;
+        }
+
+        int currentLength = rightPointer - leftPointer + 1;
+        if (currentLength > maxLength)
+        {
+          maxLength = currentLength;
+          startIndex = leftPointer;
+        }
+      }
+
+      int[] result = new int[maxLength];
+      for (int i = 0; i < maxLength; i++)
+      {
+        result[i] = numbers[startIndex + i];
+      }
+
+      return result;
     }
   }
 }
