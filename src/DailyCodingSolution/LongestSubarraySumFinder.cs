@@ -8,6 +8,13 @@ namespace DailyCodingSolution
   /// </summary>
   public class LongestSubarraySumFinder
   {
+    /// <summary>
+    /// Get the longest contiguous subarray whose sum is less than or equal to the specified maximum sum.
+    /// </summary>
+    /// <param name="numbers">The array of positive numbers to search within.</param>
+    /// <param name="maxSum">The maximum allowed sum for the subarray.</param>
+    /// <returns>The longest contiguous subarray whose sum is less than or equal to <paramref name="maxSum"/>.</returns>
+    /// <exception cref="ArgumentException">Thrown when any element in <paramref name="numbers"/> is not positive.</exception>
     public static int[] GetLongestSubarrayForPositiveNumbers(int[] numbers, int maxSum)
     {
       ArgumentOutOfRangeException.ThrowIfZero(numbers.Length, nameof(numbers));
