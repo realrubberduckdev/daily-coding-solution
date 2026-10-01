@@ -45,11 +45,11 @@ namespace DailyCodingSolution.UnitTests
       new TheoryDataRow<int[], int, int[]>([10, 15, 3, 7], 17, [3, 7])
           .WithTestDisplayName("Returns longest subarray totaling <=17"),
 
-          new TheoryDataRow<int[], int, int[]>([2, 4, 6, 8, 10, 12, 16], 14, [2, 4, 6])
-          .WithTestDisplayName("Returns longest subarray totaling <=14"),
+      new TheoryDataRow<int[], int, int[]>([2, 4, 6, 8, 10, 12, 16], 14, [2, 4, 6])
+      .WithTestDisplayName("Returns longest subarray totaling <=14"),
 
-          new TheoryDataRow<int[], int, int[]>([10, 15, 3, 7], 2, [])
-          .WithTestDisplayName("Returns empty array when no match exists")
+      new TheoryDataRow<int[], int, int[]>([10, 15, 3, 7], 2, [])
+      .WithTestDisplayName("Returns empty array when no match exists")
     ];
 
     [Theory]
@@ -70,11 +70,11 @@ namespace DailyCodingSolution.UnitTests
       new TheoryDataRow<int[], int, int[]>([10, -15, 3, 7], 17, [3, 7])
           .WithTestDisplayName("Returns longest subarray totaling <=17"),
 
-          new TheoryDataRow<int[], int, int[]>([2, 4, 6, 8, -10, 12, 16], 14, [2, 4, 6])
-          .WithTestDisplayName("Returns longest subarray totaling <=14"),
+      new TheoryDataRow<int[], int, int[]>([2, 4, 6, 8, -10, 12, 16], 14, [2, 4, 6])
+      .WithTestDisplayName("Returns longest subarray totaling <=14"),
 
-          new TheoryDataRow<int[], int, int[]>([10, 15, 3, 7], 2, [])
-          .WithTestDisplayName("Returns empty array when no match exists")
+      new TheoryDataRow<int[], int, int[]>([10, 15, 3, 7], 2, [])
+      .WithTestDisplayName("Returns empty array when no match exists")
     ];
   }
 }
